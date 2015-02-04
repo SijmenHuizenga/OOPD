@@ -18,10 +18,10 @@ In het geheugenmodel gaat bij een variable of array gaat de pijl altijd vanuit d
 ### Opgave Geheugenmodel van doeKeerTwee
 
 #### Onderdeel A
-![stack and heep picture 1](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![stack and heep picture 1](https://raw.githubusercontent.com/SijmenHuizenga/OOPD/master/week%201/les%202/stackAndHeap_onderdeelA.png)
 
 #### Onderdeel B
-![stack and heep picture 2](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![stack and heep picture 2](https://raw.githubusercontent.com/SijmenHuizenga/OOPD/master/week%201/les%202/stackAndHeap_onderdeelB.png)
 
 #### Onderdeel C
 In code van A verandert de globale variable niet omdat de waarde die wrodt doorgegeven aan de functie wordt gekopiëerd. Bij code van B verandert de globale variable wel omdat er aan de functie een verwijzing naar de globale variable wordt meegegeven. De functie gaat dan de globale variable veranderet.
