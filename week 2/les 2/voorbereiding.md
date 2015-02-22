@@ -63,7 +63,7 @@ public class Damsteen{
 ### Opgave Student op school
 
 #### A
-![diagram](https://raw.githubusercontent.com/SijmenHuizenga/OOPD/master/week%202/les%202/stackAndHeap.png)
+![diagram](https://raw.githubusercontent.com/SijmenHuizenga/OOPD/master/week%202/les%202/stackAndHeap.jpg)
 #### B
 Voor elke leerling wordt een aparte school aangemaakt in plaats van dat de zelfde shcool wordt doorgegeven.
 Dit had ik ook wel kunnen vertellen zonder diagram te tekenen. Nu is er voor niks een boom omgehakt :cry:
