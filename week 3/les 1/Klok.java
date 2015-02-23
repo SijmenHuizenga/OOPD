@@ -17,12 +17,12 @@ public class Klok {
 	 * The background color of the clock.
 	 */
 	private int backgroundColor;
-	
+
 	/**
 	 * The color of the text in the clock.
 	 */
 	private int textColor;
-	
+
 	/**
 	 * The character that seperates the different numbers.
 	 */
@@ -36,7 +36,7 @@ public class Klok {
 	/**
 	 * Constructor of a Clock. The width of the clock wil automaticly be
 	 * calcualated using the height and tellerMaximums.
-	 * 
+	 *
 	 * @param app
 	 *            the application. Only used for
 	 *            {@link PApplet#textWidth(String)} for textWidth method.
@@ -68,23 +68,26 @@ public class Klok {
 		this.locatie = new Rectangle(punt.x, punt.y, curX-punt.x, height);
 	}
 
+	/**
+	 * A class that represents 1 teller in the Klok. 
+	 */
 	private class Teller {
 
 		/**
 		 * The current number of this counter.
 		 */
 		private int huidigGetal;
-		
+
 		/**
 		 * The maximum number of this counter.
 		 */
 		private final int max;
-		
+
 		/**
 		 * the location of this counter.
 		 */
 		private final Rectangle locatie;
-		
+
 		/**
 		 * wether or not to show the seperator.
 		 */
@@ -134,7 +137,7 @@ public class Klok {
 
 	/**
 	 * draw the clock on the screen.
-	 * 
+	 *
 	 * @param window
 	 *            The window to draw opon.
 	 */
@@ -200,7 +203,7 @@ public class Klok {
 
 	/**
 	 * add leading zeros so until the string reaches numberSize.
-	 * 
+	 *
 	 * @param n
 	 *            the number
 	 * @param numberSize
@@ -228,7 +231,7 @@ public class Klok {
 
 	/**
 	 * get the amount of digitis this integer has.
-	 * 
+	 *
 	 * @param i
 	 *            the number to check.
 	 * @return the amount of digits
