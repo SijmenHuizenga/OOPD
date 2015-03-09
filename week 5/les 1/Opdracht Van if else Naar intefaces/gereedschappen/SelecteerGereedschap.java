@@ -7,6 +7,7 @@ public class SelecteerGereedschap implements IGereedschap{
 
 	@Override
 	public void pasGreedschapToe(TekenApp app) {
+		System.out.println("s");
 	}
 
 }

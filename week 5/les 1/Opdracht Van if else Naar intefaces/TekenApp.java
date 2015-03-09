@@ -3,19 +3,17 @@ package sijmenhuizenga.oopd.vanifelse;
 import java.util.ArrayList;
 
 import processing.core.PApplet;
-import sijmenhuizenga.oopd.vanifelse.figuren.Cirkel;
-import sijmenhuizenga.oopd.vanifelse.figuren.Rechthoek;
+import sijmenhuizenga.oopd.vanifelse.gereedschappen.CirkelGereedschap;
+import sijmenhuizenga.oopd.vanifelse.gereedschappen.GumGereedschap;
+import sijmenhuizenga.oopd.vanifelse.gereedschappen.RechthoekGereedschap;
+import sijmenhuizenga.oopd.vanifelse.gereedschappen.SelecteerGereedschap;
 
 public class TekenApp extends PApplet {
 	
 	private static final long serialVersionUID = 8535080038834173930L;
 
-	public static void main(String[] args) {
-		PApplet.main(TekenApp.class.getName());
-	}
-
-	private ArrayList<Figuur> figurenLijst = new ArrayList<>();
-	private String huidigGereedschap = "selecteer";
+	public ArrayList<Figuur> figurenLijst = new ArrayList<>();
+	private IGereedschap huidigGereedschap = new SelecteerGereedschap();
 
 	public void setup() {
 		size(400, 400);
@@ -29,42 +27,22 @@ public class TekenApp extends PApplet {
 	}
 
 	public void mousePressed() {
-		switch (huidigGereedschap) {
-		case "selecteer":
-			System.out.println("s");
-			break;
-		case "rechthoek":
-			Rechthoek r = new Rechthoek(mouseX, mouseY, 50, 50);
-			figurenLijst.add(r);
-			break;
-		case "cirkel":
-			Cirkel c = new Cirkel(mouseX, mouseY, 50);
-			figurenLijst.add(c);
-			break;
-		case "gum":
-			for (int i = figurenLijst.size() - 1; i >= 0; i--) {
-				Figuur fig = figurenLijst.get(i);
-				if (fig.isMuisBinnen(mouseX, mouseY)) {
-					figurenLijst.remove(i);
-				}
-			}
-			break;
-		}
+		huidigGereedschap.pasGreedschapToe(this);
 	}
 
 	public void keyReleased() {
 		switch (key) {
 		case 's':
-			huidigGereedschap = "selecteer";
+			huidigGereedschap = new SelecteerGereedschap();
 			break;
 		case 'r':
-			huidigGereedschap = "rechthoek";
+			huidigGereedschap = new RechthoekGereedschap();
 			break;
 		case 'c':
-			huidigGereedschap = "cirkel";
+			huidigGereedschap = new CirkelGereedschap();
 			break;
 		case 'g':
-			huidigGereedschap = "gum";
+			huidigGereedschap = new GumGereedschap();
 			break;
 		}
 	}
